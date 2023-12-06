@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+      <div class="col mt-2 mb-4">
+        <h2>Products</h2>
+      </div>
+      <div class="col mt-2 mb-4 align-self-center">
+        <button type="button" class="btn btn-primary" [routerLink]="['/product-add']"><i class="bi bi-plus-square mx-2"></i>Add new product</button>
+      </div>
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Raça do Gato</th>
+              <th scope="col">Origem</th>
+              <th scope="col">Temperamento</th>
+              <th scope="col">Coloração</th>
+              <th scope="col">Imagem Gato</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of listProducts">
+              <td>{{gato.id_gato}}</td>
+              <td>{{gato.raca_gato}}</td>
+              <td>{{gato.origem_gato}}</td>
+              <td>{{gato.humor_gato}}</td>
+              <td>{{gato.imagem_gato}}</td>
+              <td>
+                <button type="button" class="mx-2 btn btn-success" [routerLink]="['/product-edit', product.id]" ><i class="bi bi-pencil-square mx-2"></i>Edit</button>
+                <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)"><i class="bi bi-trash-fill mx-2"></i>Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+

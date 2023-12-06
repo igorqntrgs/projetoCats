@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Raça do Gato</th>
+              <th scope="col">Origem</th>
+              <th scope="col">Temperamento</th>
+              <th scope="col">Coloração</th>
+              <th scope="col">Imagem Gato</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let chapter of listChapter">
+              <th scope="row">{{chapter.id}}</th>
+              <td>{{chapter.nome_raca}}</td>
+              <td>{{chapter.origem_gato}}</td>
+              <td>{{chapter.humor_gato}}</td>
+              <td>{{chapter.cor_gato}}</td>
+              <td>{{chapter.imagem_gato}}</td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
